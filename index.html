@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello YogKulam</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background-color: #f5f0e6;
+      color: #222;
+      transition: background-color 0.4s ease;
+      text-align: center;
+      padding: 0 16px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.25rem;
+      margin-top: 0;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #222;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello YogKulam</h1>
+  <p>Ardhendu Shekhar Tripathi</p>
+  <button id="colorBtn">Background Rang Badlo</button>
+
+  <script>
+    const colors = ["#f5f0e6", "#ffd6a5", "#caffbf", "#9bf6ff", "#bdb2ff", "#ffc6ff", "#fdffb6"];
+    let index = 0;
+
+    document.getElementById("colorBtn").addEventListener("click", function () {
+      index = (index + 1) % colors.length;
+      document.body.style.backgroundColor = colors[index];
+    });
+  </script>
+</body>
+</html>
